@@ -37,3 +37,7 @@ class Solution:
             if nums[i] > nums[i - 1]:
                 decreasing = False
         return increasing or decreasing
+
+p = Solution()
+nu = [1, 2, 3, 4]
+print(p.isMonotonic(nu))
