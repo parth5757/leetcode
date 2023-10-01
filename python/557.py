@@ -21,24 +21,53 @@
 # There is at least one word in s.
 # All the words in s are separated by a single space.
 
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        words = input_string.split()# Step 1: Split the string into a list of words
-        # Step 2: Iterate through the words and reverse those with whitespace
-        for i in range(len(words)):
-            if ' ' in words[i]:
-                # Split the word into parts based on whitespace
-                word_parts = words[i].split(' ')
-                # Reverse the parts and join them with a space
-                reversed_word = ' '.join(reversed(word_parts))
-                words[i] = reversed_word
+# class Solution:
+#     def reverseWords(self, s: str) -> str:
+#         words = s.split()# Step 1: Split the string into a list of words
+#         # Step 2: Iterate through the words and reverse those with whitespace
+#         for i in range(len(words)):
+#             if ' ' in words[i]:
+#                 # Split the word into parts based on whitespace
+#                 word_parts = words[i].split(' ')
+#                 # Reverse the parts and join them with a space
+#                 reversed_word = ' '.join(reversed(word_parts))
+#                 words[i] = reversed_word
 
-        # Step 3: Join the list of words back into a string
-        result_string = ' '.join(words)
+#         # Step 3: Join the list of words back into a string
+#         result_string = ' '.join(words)
         
-        return result_string
+#         return result_string
 
-# Example usage:
-input_string = "Hello world apple banana"
-result = reverse_words_with_whitespace(input_string)
-print(result)  # Output: "olleH world elppa banana"
+# # Example usage:
+# s = "Hello world apple banana"
+# result = reverseWords(s)
+# print(result)  # Output: "olleH world elppa banana"
+
+# class Solution:
+#     def reverseWords(self, s: str) -> str:
+#         char_list = list(s)# Step 1: Convert the string into a list of characters
+
+#         # Step 2: Identify word boundaries based on whitespace
+#         word_start = 0
+#         for i in range(len(char_list)):
+#             if char_list[i] == ' ':
+#                 # Found a word boundary, reverse the word
+#                 word_end = i - 1
+#                 while word_start < word_end:
+#                     char_list[word_start], char_list[word_end] = char_list[word_end], char_list[word_start]
+#                     word_start += 1
+#                     word_end -= 1
+#                 # Move the word_start to the next character
+#                 word_start = i + 1
+
+#         # Step 3: Convert the list of characters back into a string
+#         result_string = ''.join(char_list)
+
+#         return result_string
+
+# # Example usage:
+# s = "Hello world apple banana"
+# result = reverseWords(s)
+# print(result)  # Output: "olleH world elppa banana"
+
+
