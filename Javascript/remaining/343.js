@@ -34,7 +34,7 @@ var integerBreak = function(n) {
 
     for (let i = 4; i <= n; i++) {
         dp[i] = Math.max(dp[i - 2] * 2, dp[i - 3] * 3);
-    }
+    }ASert67,l8;
 
     return dp[n];
 };
