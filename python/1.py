@@ -29,17 +29,36 @@
 # Only one valid answer exists.
 
 
-class solution(object):
+# class solution(object):
+#     def twoSum(self, nums, target):
+#         ans = []
+#         for i in range(len(nums)):
+#             for j in range(i+1, len(nums)):
+#                 if nums[i] + nums[j]== target:
+#                     # print(i , j)
+#                     ans.extend([i, j])
+#         return ans
+
+# num1 = [7, 4, 2 ,8]
+# tar = 9
+# sol = solution()
+# print(sol.twoSum(num1, tar))
+    
+class Solution(object):
     def twoSum(self, nums, target):
         ans = []
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j]== target:
-                    # print(i , j)
-                    ans.extend([i, j])
-        return ans
+        i = 0
+        while i < len(nums) - 1:
+            j = i + 1
+            while j < len(nums):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                j += 1
+            i += 1
+        return []
+
 
 num1 = [7, 4, 2 ,8]
 tar = 9
-sol = solution()
+sol = Solution()
 print(sol.twoSum(num1, tar))
