@@ -1,8 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -10,44 +5,25 @@ class Solution(object):
         :type l2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        val1 = int(''.join(map(str ,l1)))
-        print("val1", val1)
-        Val1 = int(str(val1)[::-1])
-        print("Val1", Val1)
-        val2 = int(''.join(map(str, l2)))
-        print("val2", val2)
-        Val2 = int(str(val2)[::-1])
-        print("Val2", Val2)
+        # val1 = int(''.join(map(str ,l1)))
+        # Val1 = int(str(val1)[::-1])
+        # val2 = int(''.join(map(str, l2)))
+        # Val2 = int(str(val2)[::-1])
 
-        total = Val1 + Val2
-        print("total", total)
-        Total = int(str(total)[::-1])
+        # total = Val1 + Val2
+        # Total = int(str(total)[::-1])
 
-        return list(str(Total))
+        # return list(str(Total))
 
-
-sol = Solution()
-print(sol.addTwoNumbers(l1=[2,4,3], l2=[5,6,4]))
-print(sol.addTwoNumbers(l1=[9,9,9,9,9,9,9], l2=[9,9,9,9]))
-
-
-
-
-
-
-
-
-
-
-
-
+        val1 = int(''.join(map(str, l1)))
+        val2 = ""
+        for num in l2:
+            val2 += str(num)
+        reversed_val1 = int(''.join([val for val in str(val1)][::-1]))
+        reversed_val2 = int(''.join([val for val in str(val2)][::-1]))
+        ans = reversed_val1 + reversed_val2
+        return int(''.join([val for val in str(ans)][::-1]))
         
-#         val1 = int(''.join(map(str, l1)))
-#         val2 = int(''.join(map(str, l2)))
-#         total = val1 + val2
-#         ans = [int(x) for x in str(total)]
-#         ans.reverse()
-#         return ans
-
-# sol = Solution()
-# print(sol.addTwoNumbers(l1=[2,4,3], l2=[5,6,4]))
+s = Solution()
+print(s.addTwoNumbers([2,4,3], [5,6,4]))
+print(s.addTwoNumbers(l1=[9,9,9,9,9,9,9], l2=[9,9,9,9]))
