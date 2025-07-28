@@ -11,21 +11,21 @@ var checkDivisibility = function(n) {
     for(i=0; i<digit.length;i++){
         // console.log(parseInt(i, 10), digit[i]) // not working
         addition = addition + Number(digit[i]);
-        // console.log(addition);
+        console.log(addition);
         multiplication = multiplication * Number(digit[i]);
-        // console.log(multiplication);
+        console.log(multiplication);
     }
     const total = addition + multiplication;
     // console.log(total, addition, multiplication);
     if(total == n){
         return true;
-    } else if(total % n == 0){
+    } else if(n % total == 0){
         return true;
     } else{
         return false;
     }
 };
 
-const n = 99;
+const n = 8;
 // console.log("Test case 1", checkDivisibility(n));
 console.log(checkDivisibility(n));
